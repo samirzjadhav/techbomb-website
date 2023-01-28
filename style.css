@@ -132,7 +132,7 @@ h4 {
 .flexcol {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1;
 }
 
 .main-links a:hover {
@@ -1089,7 +1089,7 @@ form span {
 }
 
 .footer-info .logo {
-  margin-bottom: 1em;
+  margin: 0 0 1em -0.75em;
 }
 
 .footer-info .wrapper .flexcol {
@@ -1108,6 +1108,11 @@ form span {
   border-radius: var(--percent50);
   margin: 0.25em;
   transition: var(--trans-background);
+}
+
+.footer-info .mini-text {
+  margin-top: 2em;
+  text-align: center;
 }
 
 /* Responsive */
