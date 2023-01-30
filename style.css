@@ -1083,6 +1083,33 @@ form span {
   background-color: var(--light-bg-color);
 }
 
+/* footer info */
+.footer-info {
+  padding: 3.5em 0 5em;
+}
+
+.footer-info .logo {
+  margin-bottom: 1em;
+}
+
+.footer-info .wrapper .flexcol {
+  align-items: center;
+  gap: 0;
+}
+
+.footer-info ul li a {
+  font-size: 1.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--light-bg-color);
+  border-radius: var(--percent50);
+  margin: 0.25em;
+  transition: var(--trans-background);
+}
+
 /* Responsive */
 
 @media (min-width: 481px) {
