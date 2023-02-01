@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;600&display=swap");
+
 :root {
   --primary-color: #ff6b6b;
   --secondary-color: #794afa;
@@ -155,7 +156,7 @@ h4 {
   margin: auto;
 }
 
-.large-icon {
+.icon-large {
   font-size: 1.75em;
   padding: 0 0.75em;
 }
@@ -207,6 +208,12 @@ header li > a {
 }
 
 /* Header nav */
+.header-nav {
+  padding: 0.5em 0;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid var(--border-color);
+}
+
 .trigger {
   font-size: 1.5em;
   display: flex;
@@ -270,12 +277,51 @@ nav .fly-item {
   background-color: var(--primary-color);
 }
 
-@media screen and (max-width: 992px) {
+.header-nav .right {
+  position: relative;
+  margin-left: auto;
+}
+
+.header-nav .right .icon-large {
+  position: relative;
+}
+
+.header-nav .right .fly-item {
+  top: 0;
+  right: 16px;
+  width: 16px;
+  background-color: var(--secondary-dark-color);
+  border-radius: var(--percent50);
+}
+
+.mobile-hide {
+  display: none;
+}
+
+@media (min-width: 992px) {
   .container {
     padding: 0 2em;
   }
 
   .desktop-hide {
     display: none;
+  }
+
+  .mobile-hide {
+    display: block;
+  }
+
+  .logo a {
+    margin-right: 2em;
+  }
+
+  .header-nav {
+    padding: 0px;
+    margin: 0px;
+    border-bottom: 0px;
+  }
+
+  .header-nav .right li > a {
+    margin-left: 1em;
   }
 }
