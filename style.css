@@ -8,7 +8,7 @@
   --light-bg-color: #f2f3f5;
   --light-text-color: #7c899a;
   --border-color: #e5e8ec;
-  --dark-color:#0a021c
+  --dark-color: #0a021c;
 
   --font-small: 13px;
   --font-smaller: 11px;
@@ -27,10 +27,10 @@
   --trans-color: color 0.3s;
 }
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
@@ -42,110 +42,172 @@ body {
   background-color: var(--white-color);
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
-    -webkit-tap-highlight-color: transparent;
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-img{
-    max-width: var(--percent100);
-    vertical-align: middle;
+img {
+  max-width: var(--percent100);
+  vertical-align: middle;
 }
 
-strong{
-    font-weight: var(--fw8);
+strong {
+  font-weight: var(--fw8);
 }
 
-table{
-    border-collapse: collapse;
-    border-spacing: 0;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-input::placeholder{
-    font: inherit;
+input::placeholder {
+  font: inherit;
 }
 
-h1,h2,h3,h4{
-    font-family: 'poppins';
+h1,
+h2,
+h3,
+h4 {
+  font-family: "poppins";
 }
 
-h1{
-    font-size: calc(1.3em + 1.4vw);
-    font-weight: var(--fw8);
-    line-height: 1;
+h1 {
+  font-size: calc(1.3em + 1.4vw);
+  font-weight: var(--fw8);
+  line-height: 1;
 }
 
-h2{
-    font-size: 2.5em;
+h2 {
+  font-size: 2.5em;
 }
 
-h3{
-    font-size: 1.2em;
-    font-weight: var(--fw7);
+h3 {
+  font-size: 1.2em;
+  font-weight: var(--fw7);
 }
-h4{
-    font-size: 1em;
-    font-weight: var(--fw6);
+h4 {
+  font-size: 1em;
+  font-weight: var(--fw6);
 }
 
 /* RESUSABLE SELECTOR */
-.container{
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 0.938em;
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0.938em;
 }
 
-.column{
-margin-left:-0.938em;
-margin-right: -0.938em;
+.column {
+  margin-left: -0.938em;
+  margin-right: -0.938em;
 }
 
-.column .row{
-    padding: 0 0.938em;
+.column .row {
+  padding: 0 0.938em;
 }
 
-.flexwrap{
-    display: flex;
-    flex-wrap: wrap;
+.flexwrap {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.flexcenter{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.flexitem{
-    display: flex;
-    align-items: center;
+.flexitem {
+  display: flex;
+  align-items: center;
 }
 
-.flexcol{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+.flexcol {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
-.main-links a:hover{
-color: var(--secondary-color);
+.main-links a:hover {
+  color: var(--secondary-color);
 }
 
-.second-links a:hover{
-    color: var(--light-text-color);
+.second-links a:hover {
+  color: var(--light-text-color);
 }
 
+.icon-small,
+.icon-large {
+  display: flex;
+  align-items: center;
+  padding: 0 0.25em;
+  font-weight: normal;
+}
 
+.icon-small {
+  font-size: 1.25em;
+  margin: auto;
+}
 
+.large-icon {
+  font-size: 1.75em;
+  padding: 0 0.75em;
+}
 
+/* Header Section */
+header li > a {
+  display: flex;
+  position: relative;
+  line-height: inherit;
+  transition: var(--trans-color);
+}
 
+/* header top */
+.header-top .wrapper {
+  font-size: var(--font-small);
+  font-weight: var(--fw3);
+  justify-content: space-between;
+  line-height: 42px;
+}
 
-@media screen and (max-width:992px){
-.container{
+.header-top .wrapper ul {
+  gap: 2em;
+}
+
+.header-top li {
+  position: relative;
+}
+
+.header-top ul ul {
+  position: absolute;
+  left: -1em;
+  line-height: 2em;
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+  z-index: 1;
+  display: none;
+}
+
+.header-top .right ul ul li a {
+  padding: 0.25em 1em;
+}
+
+.header-top .right ul ul li.current a {
+  background-color: var(--border-color);
+}
+
+.header-top li:hover ul {
+  display: block;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
     padding: 0 2em;
-}
+  }
 }
