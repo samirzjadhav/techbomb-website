@@ -206,8 +206,76 @@ header li > a {
   display: block;
 }
 
+/* Header nav */
+.trigger {
+  font-size: 1.5em;
+  display: flex;
+  padding: 0.25em;
+  margin-right: 0.5em;
+}
+
+.logo a {
+  font-family: "Poppins";
+  font-size: 1.75em;
+  position: relative;
+  font-weight: var(--fw8);
+  display: flex;
+  padding-left: 0.75em;
+  margin-right: 2em;
+}
+.circle {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--percent50);
+  background-color: var(--light-bg-color);
+  z-index: -1;
+}
+
+.circle:before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--percent50);
+  background-color: var(--secondary-color);
+  bottom: 5px;
+  right: 5px;
+  opacity: 0.4;
+}
+
+.header-nav nav > ul {
+  line-height: 100px;
+  gap: 2em;
+}
+
+.fly-item {
+  position: absolute;
+  text-align: center;
+  height: 16px;
+  font-size: var(--font-smaller);
+  padding: 3px;
+  line-height: 10px;
+  color: var(--white-color);
+}
+
+nav .fly-item {
+  top: 50%;
+  margin-top: -24px;
+  width: 30px;
+  border-radius: 3px;
+  right: -32px;
+  background-color: var(--primary-color);
+}
+
 @media screen and (max-width: 992px) {
   .container {
     padding: 0 2em;
+  }
+
+  .desktop-hide {
+    display: none;
   }
 }
