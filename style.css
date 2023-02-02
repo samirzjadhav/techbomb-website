@@ -1071,6 +1071,18 @@ form.search button:hover {
   width: var(--percent100);
 }
 
+form span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Widgets */
+.widgets {
+  padding: 3.5em 2.5em;
+  background-color: var(--light-bg-color);
+}
+
 /* Responsive */
 
 @media (min-width: 481px) {
@@ -1085,7 +1097,8 @@ form.search button:hover {
   }
 
   .products.mini,
-  .banner .row {
+  .banner .row,
+  .widgets .row {
     flex: 0 0 50%;
   }
 
@@ -1303,7 +1316,8 @@ form.search button:hover {
     position: relative;
   }
 
-  .products.main .item {
+  .products.main .item,
+  .widgets .row {
     flex: 0 0 25%;
   }
 
