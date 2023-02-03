@@ -1044,6 +1044,33 @@ form.search button:hover {
   text-decoration: underline;
 }
 
+/* Footer */
+/* News Letter */
+.newsletter {
+  padding: 2.5em 0;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+
+.newsletter h3 {
+  font-size: 1.5em;
+}
+
+.newsletter p {
+  font-weight: var(--fw3);
+  color: var(--border-color);
+  margin: 0.5em 0 1.5em;
+}
+
+.newsletter p strong {
+  color: var(--primary-color);
+}
+
+.newsletter form {
+  max-width: 500px;
+  width: var(--percent100);
+}
+
 /* Responsive */
 
 @media (min-width: 481px) {
@@ -1278,5 +1305,12 @@ form.search button:hover {
 
   .products.main .item {
     flex: 0 0 25%;
+  }
+
+  /* Footer */
+  .newsletter .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
