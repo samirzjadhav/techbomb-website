@@ -1020,6 +1020,30 @@ form.search button:hover {
   z-index: 3;
 }
 
+/* Banners product-categories */
+.banners .products-categories .item {
+  display: flex;
+  padding: 1.5em;
+}
+
+.banners .products-categories .image {
+  max-width: 150px;
+}
+
+.mini-links ul {
+  font-size: var(--font-small);
+  color: var(--light-text-color);
+  margin-top: 1em;
+}
+
+.banners .second-links {
+  margin-top: 2em;
+}
+
+.mini-links li a:hover {
+  text-decoration: underline;
+}
+
 /* Responsive */
 
 @media (min-width: 481px) {
@@ -1242,7 +1266,8 @@ form.search button:hover {
 
   /* Product */
 
-  .trending .products {
+  .trending .products,
+  .products-categories .row {
     flex: 0 0 33.3333%;
   }
 
