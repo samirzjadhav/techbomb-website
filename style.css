@@ -220,6 +220,11 @@ h4 {
   transition: var(--trans-color);
 }
 
+.mini-text {
+  font-size: var(--font-small);
+  color: var(--light-text-color);
+}
+
 /* Header Section */
 header li > a {
   display: flex;
