@@ -361,6 +361,41 @@ nav .fly-item {
   z-index: 1;
 }
 
+/* Header */
+.header-main {
+  background-color: var(--secondary-dark-color);
+  padding: 1.5em 0;
+  margin-bottom: 2em;
+}
+
+.dpt-cat {
+  position: relative;
+  z-index: 10;
+}
+
+.dpt-cat .dpt-head {
+  position: relative;
+  width: 300px;
+  padding: 0.75em 1.5em;
+  background-color: var(--primary-color);
+  border-radius: 7px 7px 0 0;
+  color: var(--white-color);
+  margin-bottom: -2.15em;
+}
+
+.dpt-cat .dpt-head .mini-text {
+  color: var(--light-bg-color);
+}
+
+.dpt-cat .dpt-trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1.3em;
+  height: 60px;
+  width: 60px;
+}
+
 @media (min-width: 992px) {
   .container {
     padding: 0 2em;
