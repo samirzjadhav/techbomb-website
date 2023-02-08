@@ -401,6 +401,20 @@ nav .fly-item {
   width: 60px;
 }
 
+/* Header Search Form */
+.header-right .right {
+  flex: 1;
+}
+
+form {
+  position: relative;
+}
+
+form:search input {
+  line-height: 3.25em;
+  padding: 0 7em 0 4.25em;
+}
+
 @media (min-width: 992px) {
   .container {
     padding: 0 2em;
