@@ -153,7 +153,7 @@ h4 {
 
 .icon-small {
   font-size: 1.25em;
-  margin: auto;
+  margin-left: auto;
 }
 
 .icon-large {
@@ -401,6 +401,12 @@ nav .fly-item {
   width: 60px;
 }
 
+.dpt-menu > ul > li > a {
+  font-size: var(--font-small);
+  height: 46px;
+  align-items: center;
+}
+
 /* Header Search Form */
 .header-main .right {
   flex: 1;
@@ -562,5 +568,22 @@ form.search button:hover {
   .header-main .right {
     max-width: 600px;
     margin-left: auto;
+  }
+
+  /* Deparments menu */
+  .dpt-menu {
+    position: absolute;
+    top: var(--percent100);
+    width: 300px;
+    /* color: var(--white-color); */
+    border: 1px solid var(--border-color);
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  .dpt-menu > ul > li > a {
+    font-weight: var(--fw5);
+    padding: 0 1.5em;
+    border-bottom: 1px solid --border-color;
   }
 }
