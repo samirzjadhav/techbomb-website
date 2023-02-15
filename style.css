@@ -873,11 +873,21 @@ form.search button:hover {
 .products .stock .available {
   height: 3px;
   width: 21%;
+  background-color: var(--secondary-color);
 }
 
 .products .item {
   display: flex;
-  position: relative;
+}
+
+.products .stock-danger {
+  color: var(--primary-color);
+}
+
+.flexwrap .row {
+  flex: 0 0 100%;
+  width: 100%;
+  margin-bottom: 2em;
 }
 
 /* Big Products */
@@ -899,6 +909,7 @@ form.search button:hover {
   width: 130px;
   height: 160px;
   margin-right: 1.25em;
+  position: relative;
 }
 
 .products.mini .content {
@@ -910,9 +921,19 @@ form.search button:hover {
   font-weight: 400;
 }
 
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
+  }
+
+  .products.mini {
+    flex: 0 0 50%;
   }
 }
 
@@ -1120,6 +1141,7 @@ form.search button:hover {
   }
 
   .products.big .media {
-    max-height: 373px;
+    max-height: 420px;
+    position: relative;
   }
 }
