@@ -226,7 +226,7 @@ h4 {
 }
 
 /* Header Section */
-header li > a {
+:where(.off-canvas, header) li > a {
   display: flex;
   position: relative;
   line-height: inherit;
@@ -263,7 +263,7 @@ header li > a {
   padding: 0.25em 1em;
 }
 
-.header-top .right ul ul li.current a {
+:where(.header-top, .thetop-nav).right ul ul li.current a {
   background-color: var(--border-color);
 }
 
@@ -411,6 +411,10 @@ nav .fly-item {
   display: block;
 }
 
+.dpt-menu .has-child li a:hover {
+  text-decoration: underline;
+}
+
 /* Header Search Form */
 .header-main .right {
   flex: 1;
@@ -463,12 +467,12 @@ form.search button:hover {
 
 /* Responsive Menu - Off Canvas */
 
-.ide-off {
+.side-off {
   position: fixed;
   width: 320px;
   height: var(--percent100);
   background-color: var(--white-color);
-  overflow-x: auto;
+  overflow-y: auto;
   z-index: 1000;
 }
 
@@ -520,6 +524,65 @@ form.search button:hover {
   text-align: center;
   background-color: var(--light-bg-color);
   border-radius: 7px 7px 0 0;
+}
+
+.off-canvas .has-child > :where(ul, .mega) {
+  font-size: var(--font-small);
+  font-weight: var(--fw3);
+  line-height: 28px;
+  padding-left: 3px;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.off-canvas .thetop-nav ul,
+.off-canvas nav > ul {
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: var(--font-small);
+  line-height: 36px;
+  padding-top: 1.25em;
+  margin: 1.25em 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.off-canvas nav .mega {
+  padding: 0px;
+}
+
+.off-canvas nav .mega .product {
+  display: none;
+}
+
+.off-canvas .has-child .icon-small {
+  padding: 0.5em;
+  line-height: initial;
+}
+
+.off-canvas .dpt-menu .icon-small {
+  transform: rotate(90deg);
+}
+
+.off-canvas .has-child {
+  width: var(--percent100);
+}
+
+.off-canvas
+  .thetop-nav
+  .right
+  > ul
+  > :where(:nth-child(4), li:nth-child(5))
+  > a {
+  display: none;
+}
+
+.off-canvas .thetop-nav .right ul ul li a {
+  padding: 0.5em;
+  border: 1px solid var(--border-color);
+  line-height: 16px;
+  margin: 0 0.5em 0.5em 0;
 }
 
 @media (min-width: 992px) {
