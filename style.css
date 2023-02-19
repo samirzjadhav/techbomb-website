@@ -883,6 +883,18 @@ form.search button:hover {
   margin: 0 auto;
 }
 
+/* Mini Products */
+
+.products.mini .item {
+  margin-bottom: 2em;
+}
+
+.products.mini .media {
+  width: 130px;
+  height: 160px;
+  margin-right: 1.25em;
+}
+
 @media (min-width: 768px) {
 }
 
