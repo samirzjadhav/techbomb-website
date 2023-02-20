@@ -852,6 +852,28 @@ form.search button:hover {
   margin-right: 0.25em;
 }
 
+.products .price .normal {
+  color: var(--light-text-color);
+  text-decoration: line-through;
+}
+
+.products .stock .qty {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products .stock .bar {
+  height: 3px;
+  margin-top: 1em;
+  background-color: var(--border-color);
+  overflow: hidden;
+}
+
+.products .stock .available {
+  height: 3px;
+  width: 21%;
+}
+
 /* Big Products */
 .products.big .item {
   flex-direction: column;
@@ -859,6 +881,9 @@ form.search button:hover {
   border: 2px solid var(--secondary-dark-color);
   border-radius: 7px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
 }
 
 @media (min-width: 992px) {
