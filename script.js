@@ -16,3 +16,16 @@ function copyMenu() {
   topPlace.innerHTML = topNav.innerHTML;
 }
 copyMenu();
+
+// Show sub menu on mobile
+const submenu = document.querySelector(".has-child .icon-small");
+submenu.forEach((menu) => menu.addEventListener("click", toggle));
+
+function toggle(e) {
+  e.preventDefault();
+  submenu.forEach((item) =>
+    item != this ? item.closest(".has-child").classList.remove("expand") : null
+  );
+  if (this.closest(".his-child").classList != "expand");
+  this.closest(".has-child").classList.toggle("expand");
+}
