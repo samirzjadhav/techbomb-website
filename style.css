@@ -259,11 +259,11 @@ h4 {
   display: none;
 }
 
-.header-top .right ul ul li a {
+:where(.header-top, .thetop-nav) .right ul ul li a {
   padding: 0.25em 1em;
 }
 
-:where(.header-top, .thetop-nav).right ul ul li.current a {
+:where(.header-top, .thetop-nav) .right ul ul li.current a {
   background-color: var(--border-color);
 }
 
@@ -294,6 +294,7 @@ h4 {
   padding-left: 0.75em;
   margin-right: 2em;
 }
+
 .circle {
   position: absolute;
   top: -15px;
@@ -561,7 +562,7 @@ form.search button:hover {
   line-height: initial;
 }
 
-.off-canvas .dpt-menu .icon-small {
+.off-canvas .dpt-menu .icon-small i {
   transform: rotate(90deg);
 }
 
@@ -578,12 +579,20 @@ form.search button:hover {
   display: none;
 }
 
+
+.off-canvas .thetop-nav .right ul ul {
+display: flex;
+flex-direction: row;
+}
+
 .off-canvas .thetop-nav .right ul ul li a {
   padding: 0.5em;
   border: 1px solid var(--border-color);
   line-height: 16px;
   margin: 0 0.5em 0.5em 0;
 }
+
+
 
 @media (min-width: 992px) {
   .container {

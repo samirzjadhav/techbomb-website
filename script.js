@@ -11,7 +11,7 @@ function copyMenu() {
   navPlace.innerHTML = mainNav.innerHTML;
 
   // Copy .header-top .wrapper to .thetop-nav
-  const topNav = document.querySelector(".header-top");
+  const topNav = document.querySelector(".header-top .wrapper");
   const topPlace = document.querySelector(".off-canvas .thetop-nav");
   topPlace.innerHTML = topNav.innerHTML;
 }
