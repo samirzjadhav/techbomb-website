@@ -532,10 +532,15 @@ form.search button:hover {
   font-weight: var(--fw3);
   line-height: 28px;
   padding-left: 3px;
+
   height: auto;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.off-canvas .expand > :where(ul, .mega) {
+  max-height: 2000px;
 }
 
 .off-canvas .thetop-nav ul,
@@ -579,10 +584,9 @@ form.search button:hover {
   display: none;
 }
 
-
 .off-canvas .thetop-nav .right ul ul {
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .off-canvas .thetop-nav .right ul ul li a {
@@ -591,8 +595,6 @@ flex-direction: row;
   line-height: 16px;
   margin: 0 0.5em 0.5em 0;
 }
-
-
 
 @media (min-width: 992px) {
   .container {
