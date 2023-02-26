@@ -481,7 +481,7 @@ form.search button:hover {
   will-change: transform, visibility;
 }
 
-.showmenu .site-off {
+.showmenu .sit e-off {
   transform: translateX(0);
   visibility: visible;
   transform: transform 0.4s 0s, visibility 0s 0s;
@@ -604,6 +604,59 @@ form.search button:hover {
   border: 1px solid var(--border-color);
   line-height: 16px;
   margin: 0 0.5em 0.5em 0;
+}
+
+/* 02. Slider  */
+
+.slider .item {
+  position: relative;
+  height: 474px;
+}
+
+.slider .item::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 450px;
+  height: 300px;
+  background-color: var(--white-color);
+  z-index: 1;
+  filter: blur(50px);
+  opacity: 0.8;
+}
+
+.slider .text-content {
+  position: relative;
+  height: var(--percent100);
+  justify-content: flex-end;
+  padding: 0 0 10% 10%;
+  z-index: 1;
+}
+
+.slider h4 {
+  font-size: var(--font-small);
+  font-weight: var(--fw7);
+  width: fit-content;
+  padding: 4px 10px;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border-radius: 4px;
+}
+
+.text-content :where(h2, h3) span:first-child {
+  font-weight: var(--fw3);
+  columns: var(--light-text-color);
+}
+
+.text-content :where(h2, h3) span:last-child {
+  color: var(--secondary-dark-color);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--secondary-dark-color);
 }
 
 @media (min-width: 992px) {
@@ -795,5 +848,11 @@ form.search button:hover {
 
   .dpt-menu .has-child:hover .mega {
     display: flex;
+  }
+
+  /* Slider */
+  .slider > div > .wrapper {
+    width: calc(100% - (300px + 2em));
+    margin-left: auto;
   }
 }
