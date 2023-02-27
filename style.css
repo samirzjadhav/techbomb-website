@@ -659,6 +659,23 @@ form.search button:hover {
   background-color: var(--secondary-dark-color);
 }
 
+/* brand */
+
+.brands .wrapper {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2em 0;
+}
+
+.brands .item img {
+  opacity: 0.25;
+  transition: opacity 0.3s;
+}
+
+.brands .item a:hover img {
+  opacity: 1;
+}
+
 @media (min-width: 992px) {
   .container {
     padding: 0 2em;
