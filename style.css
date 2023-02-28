@@ -679,15 +679,16 @@ form.search button:hover {
 /* Product style */
 .sectop {
   justify-content: space-between;
-  padding-bottom: 0.5em;
+  padding-bottom: 1em;
   margin-top: 2em;
   border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2em;
 }
 
 .sectop h2 {
   position: relative;
   font-size: 1.5em;
-  font-weight: --fw7;
+  font-weight: var(--fw7);
 }
 
 .sectop h2 span:not(.circle) {
@@ -700,6 +701,39 @@ form.search button:hover {
 
 .trending .products {
   flex: 0 0 33.3333%;
+}
+
+/* Product global style */
+.products .offer {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.products .offer p {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+.products .offer .flexcenter li {
+  margin-left: 1em;
+}
+
+.products .offer ul li {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  padding: 0.5em;
+  line-height: initial;
+  color: var(--secondary-dark-color);
+  background-color: var(--light-bg-color);
+  border-radius: 5px;
+}
+
+.products .offer ul li:not(:last-child)::before {
+  content: ":";
+  position: absolute;
+  right: -0.6em;
+  color: var(--light-text-color);
 }
 
 @media (min-width: 992px) {
