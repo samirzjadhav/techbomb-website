@@ -1159,6 +1159,27 @@ form span {
   margin-right: -20px;
   background-color: var(--secondary-dark-color);
 }
+
+/* Buttom Menu Search */
+.search-buttom {
+  position: fixed;
+  bottom: 60px;
+  width: var(--percent100);
+  padding: 2.5em 0;
+  background-color: var(--secondary-dark-color);
+  z-index: 1000;
+}
+
+.search-buttom .t-close {
+  position: absolute;
+  top: -54px;
+  right: 0;
+}
+
+.search-buttom .t-close:hover {
+  background-color: var(--primary-color);
+}
+
 /* Responsive */
 
 @media (min-width: 481px) {
