@@ -1016,6 +1016,10 @@ form.search button:hover {
   font-size: 80%;
 }
 
+.banners .primary-button {
+  z-index: 3;
+}
+
 /* Responsive */
 
 @media (min-width: 481px) {
