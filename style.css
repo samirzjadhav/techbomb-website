@@ -482,7 +482,7 @@ form.search button:hover {
   will-change: transform, visibility;
 }
 
-.showmenu .sit e-off {
+.showmenu .site-off {
   transform: translateX(0);
   visibility: visible;
   transform: transform 0.4s 0s, visibility 0s 0s;
@@ -543,7 +543,6 @@ form.search button:hover {
   font-weight: var(--fw3);
   line-height: 28px;
   padding-left: 3em;
-
   height: auto;
   max-height: 0;
   overflow: hidden;
@@ -1124,35 +1123,36 @@ form span {
   height: 60px;
   background-color: var(--white-color);
   box-shadow: 0 -2px 10px rgb(0 0 0 / 10%);
+  z-index: 900;
 }
 
-.menu-buttom nav li {
+.menu-bottom nav li {
   flex: 1;
 }
 
-.menu-buttom nav li a {
+.menu-bottom nav li a {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0.5em 0;
-  color: var(--light-bg-color);
+  color: var(--light-text-color);
   transition: var(--trans-background);
 }
 
-.menu-buttom nav li a:hover {
+.menu-bottom nav li a:hover {
   color: var(--dark-color);
 }
 
-.menu-buttom nav li a span {
+.menu-bottom nav li a span {
   font-size: var(--font-smaller);
 }
 
-.menu-buttom nav li a i {
+.menu-bottom nav li a i {
   font-size: 1.25em;
 }
 
-.menu-buttom .fly-item {
+.menu-bottom .fly-item {
   right: 50%;
   width: 16px;
   border-radius: var(--percent50);
@@ -1161,7 +1161,7 @@ form span {
 }
 
 /* Buttom Menu Search */
-.search-buttom {
+.search-bottom {
   position: fixed;
   bottom: 60px;
   width: var(--percent100);
@@ -1173,22 +1173,35 @@ form span {
   will-change: visibility, opacity;
 }
 
-.showsearch .search-buttom {
+.showsearch .search-bottom {
   visibility: inherit;
   opacity: 1;
 }
 
-.search-buttom .t-close {
+.search-bottom .t-close {
   position: absolute;
   top: -54px;
   right: 0;
 }
 
-.search-buttom .t-close:hover {
+.search-bottom .t-close:hover {
   background-color: var(--primary-color);
 }
 
-/* Responsive */
+/* Overlays */
+.overlay {
+  position: fixed;
+  width: var(--percent100);
+  height: var(--percent100);
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgb(0, 0, 0, 0.4);
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Respo nsive */
 
 @media (min-width: 481px) {
   .products.main .item {
