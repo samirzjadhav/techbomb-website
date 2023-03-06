@@ -1168,6 +1168,14 @@ form span {
   padding: 2.5em 0;
   background-color: var(--secondary-dark-color);
   z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  will-change: visibility, opacity;
+}
+
+.showsearch .search-buttom {
+  visibility: inherit;
+  opacity: 1;
 }
 
 .search-buttom .t-close {
