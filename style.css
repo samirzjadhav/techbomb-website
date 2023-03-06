@@ -1115,6 +1115,50 @@ form span {
   text-align: center;
 }
 
+/* Bottom menu */
+.menu-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  background-color: var(--white-color);
+  box-shadow: 0 -2px 10px rgb(0 0 0 / 10%);
+}
+
+.menu-buttom nav li {
+  flex: 1;
+}
+
+.menu-buttom nav li a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em 0;
+  color: var(--light-bg-color);
+  transition: var(--trans-background);
+}
+
+.menu-buttom nav li a:hover {
+  color: var(--dark-color);
+}
+
+.menu-buttom nav li a span {
+  font-size: var(--font-smaller);
+}
+
+.menu-buttom nav li a i {
+  font-size: 1.25em;
+}
+
+.menu-buttom .fly-item {
+  right: 50%;
+  width: 16px;
+  border-radius: var(--percent50);
+  margin-right: -20px;
+  background-color: var(--secondary-dark-color);
+}
 /* Responsive */
 
 @media (min-width: 481px) {
