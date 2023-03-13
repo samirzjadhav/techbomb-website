@@ -1211,6 +1211,11 @@ form span {
   .products .media {
     position: relative !important;
   }
+
+  .menu-bottom {
+    position: fixed;
+    z-index: 900;
+  }
 }
 
 @media (min-width: 768px) {
