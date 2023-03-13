@@ -1222,9 +1222,9 @@ form span {
     z-index: 900;
   }
 
-  .container {
+  /* .container {
     max-width: 400px;
-  }
+  } */
 }
 
 @media (min-width: 768px) {
