@@ -1203,9 +1203,13 @@ form span {
 
 /* Respo nsive */
 
-@media (min-width: 481px) {
+@media (min-width: 381px) {
   .products.main .item {
     flex: 0 0 50%;
+  }
+
+  .products .media {
+    position: relative !important;
   }
 }
 
