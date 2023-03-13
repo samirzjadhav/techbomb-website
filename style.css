@@ -933,6 +933,11 @@ form.search button:hover {
 } */
 
 /* Featured products */
+
+.features {
+  overflow: hidden;
+}
+
 .products.main .item {
   flex-direction: column;
   flex: 0 0 100%;
@@ -1215,6 +1220,10 @@ form span {
   .menu-bottom {
     position: fixed;
     z-index: 900;
+  }
+
+  .container {
+    max-width: 400px;
   }
 }
 
