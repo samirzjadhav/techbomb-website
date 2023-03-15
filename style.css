@@ -1206,6 +1206,18 @@ form span {
   opacity: 0;
 }
 
+/* Page single */
+
+.page-home .dpt-cat .dpt-trigger,
+.dpt-trigger .ri-close-line,
+.showdpt .dpt-trigger .ri-menu-3-line {
+  display: none;
+}
+
+.showdpt .dpt-trigger .ri-close-line {
+  display: block;
+}
+
 /* Respo nsive */
 
 @media (min-width: 381px) {
@@ -1462,5 +1474,14 @@ form span {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  /* Page single */
+  #page:not(.page-home) .dpt-menu {
+    display: none;
+  }
+
+  #page.showdpt .dpt-menu {
+    display: block;
   }
 }

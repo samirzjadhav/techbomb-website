@@ -64,3 +64,11 @@ searchButton.addEventListener("click", function () {
 tClose.addEventListener("click", function () {
   showClass.classList.remove("showsearch");
 });
+
+// show dpt menu
+const dptButton = document.querySelector(".dpt-cat .dpt-trigger");
+const dptClass = document.querySelector(".site");
+
+dptButton.addEventListener("click", function () {
+  dptClass.classList.toggle("showdpt");
+});
