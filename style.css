@@ -1218,6 +1218,25 @@ form span {
   display: block;
 }
 
+/* Breadcrumb */
+.breadcrumb {
+  font-size: var(--font-small);
+  margin-bottom: 2em;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: "/";
+  padding: 0 0.35em;
+}
+
+.breadcrumb li:last-child {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--light-text-color);
+}
+
 /* Respo nsive */
 
 @media (min-width: 381px) {
