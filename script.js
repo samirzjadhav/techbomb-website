@@ -80,7 +80,7 @@ var productThumb = new Swiper(".small-image", {
   spaceBetween: 10,
   slidesPerView: 3,
   freeMode: true,
-  watchSlidersProgress: true,
+  watchSlidesProgress: true,
   breakpoints: {
     481: {
       spaceBetween: 32,
@@ -91,11 +91,11 @@ var productThumb = new Swiper(".small-image", {
 var productBig = new Swiper(".big-image", {
   loop: true,
   autoHeight: true,
-  navigator: {
-    nexEl: ".swiper-button-next",
-    preEl: ".swiper-button-prev",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
-  thumb: {
+  thumbs: {
     swiper: productThumb,
   },
 });
