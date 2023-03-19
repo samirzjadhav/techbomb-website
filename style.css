@@ -1317,6 +1317,26 @@ form span {
   }
 }
 
+.products :is(.swiper-button-next, .swiper-button-prev) {
+  outline: 0;
+  color: var(--secondary-dark-color);
+  transition: var(--trans-background), transform 0.3s;
+}
+
+.products .big-image:hover .swiper-button-next {
+  transform: translateX(10px);
+}
+.products .big-image:hover .swiper-button-prev {
+  transform: translateX(-10px);
+}
+
+.products :is(.swiper-button-next, .swiper-button-prev)::after {
+  font-size: 1.5em;
+}
+
+.products .big-image:hover :is(.swiper-button-next, .swiper-button-prev) {
+  background-color: var(--light-bg-color);
+}
 @media (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
