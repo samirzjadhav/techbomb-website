@@ -1237,6 +1237,38 @@ form span {
   color: var(--light-text-color);
 }
 
+/* Page single */
+/* Product details */
+.products.one .price .discount {
+  font-size: 1em;
+  font-weight: var(--fw7);
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  padding: 1em;
+  z-index: 2;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border-radius: var(--percent50);
+  margin: 0.5em;
+}
+
+.products.one :where(.big-image, .small-image) {
+  overflow: hidden;
+}
+
+.products.one .big-image {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.products.one :where(.big-image, .small-image) img {
+  object-fit: cover;
+  width: var(--percent100);
+  height: var(--percent100);
+  display: block;
+}
 /* Respo nsive */
 
 @media (min-width: 381px) {
@@ -1271,6 +1303,11 @@ form span {
 
   .products.main .item {
     flex: 0 0 33.3333%;
+  }
+
+  .products.one .row {
+    flex: 0 0 50%;
+    width: 50%;
   }
 }
 
