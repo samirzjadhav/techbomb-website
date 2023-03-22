@@ -1239,6 +1239,11 @@ form span {
 
 /* Page single */
 /* Product details */
+
+.products.one .item {
+  flex-direction: column;
+}
+
 .products.one .price .discount {
   font-size: 1em;
   font-weight: var(--fw7);
@@ -1269,6 +1274,15 @@ form span {
   height: var(--percent100);
   display: block;
 }
+
+.products.one .thumbnail-show {
+  position: relative;
+  width: 130px;
+  height: 110px;
+  overflow: hidden;
+  margin: 0 2em 2em 0;
+}
+
 /* Respo nsive */
 
 @media (min-width: 381px) {
@@ -1288,6 +1302,19 @@ form span {
   /* .container {
     max-width: 400px;
   } */
+
+  /* Page single */
+  .products.one .big-image {
+    margin-bottom: 2em;
+  }
+
+  .products.one .image-show {
+    height: 680px;
+  }
+
+  .products.one .thumbnail-show {
+    height: 160px;
+  }
 }
 
 @media (min-width: 768px) {
