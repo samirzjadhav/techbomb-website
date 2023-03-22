@@ -72,3 +72,30 @@ const dptClass = document.querySelector(".site");
 dptButton.addEventListener("click", function () {
   dptClass.classList.toggle("showdpt");
 });
+
+// Product image slider
+
+var productThumb = new Swiper(".small-image", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidersProgress: true,
+  breakpoints: {
+    481: {
+      spaceBetween: 32,
+    },
+  },
+});
+
+var productBig = new Swiper(".big-image", {
+  loop: true,
+  autoHeight: true,
+  navigator: {
+    nexEl: ".swiper-button-next",
+    preEl: ".swiper-button-prev",
+  },
+  thumb: {
+    swiper: productThumb,
+  },
+});
