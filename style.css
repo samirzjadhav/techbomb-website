@@ -1241,6 +1241,7 @@ form span {
 /* Product details */
 
 .products.one .item {
+  position: relative;
   flex-direction: column;
 }
 
