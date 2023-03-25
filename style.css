@@ -1338,6 +1338,113 @@ form span {
 .products .big-image:hover :is(.swiper-button-next, .swiper-button-prev) {
   background-color: var(--light-bg-color);
 }
+
+/* Products discription */
+.products.one .available {
+  font-size: var(--font-small);
+  font-weight: var(--fw5);
+  padding: 0.5em;
+  margin-right: 1em;
+  border-radius: 3px;
+  color: #10ac84;
+  background-color: var(--light-bg-color);
+}
+
+.products.one .add-review {
+  color: var(--dark-color);
+}
+
+.products.one .price {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.products.one .price .current {
+  font-size: 2.5em;
+}
+
+.products .variant form {
+  display: flex;
+  margin-top: 0.5em;
+}
+
+.products .variant form p {
+  position: relative;
+  margin: 0 0.5em 0.5em;
+}
+
+.products :where(.variant, .actions) .circle {
+  display: block;
+  position: static;
+  top: 0;
+  margin: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.products .variant input {
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+
+.products .variant label::before {
+  opacity: 1;
+}
+
+.products .variant label[for="cogrey"]::before {
+  background-color: #576674;
+}
+.products .variant label[for="coblue"]::before {
+  background-color: #45a0ff;
+}
+.products .variant label[for="cogreen"]::before {
+  background-color: #1dd1a1;
+}
+
+.single-product .variant form p input:checked + label {
+  background-color: transparent;
+  border: 2px solid var(--dark-color);
+  color: var(--white-color);
+}
+
+.products .sizes .variant label::before {
+  background-color: var(--white-color);
+}
+
+.products .sizes .variant label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--percent100);
+  height: var(--percent100);
+  font-size: 0.85em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-product .sizes .variant form p input:checked + label::before {
+  background-color: var(--dark-color);
+  opacity: 1;
+}
+
+.products .actions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.products .qty-control {
+  width: fit-content;
+  padding: 0.5em;
+  border: 1px solid var(--border-color);
+  margin: 0 2em 2em 0;
+}
 @media (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
