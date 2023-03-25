@@ -1513,6 +1513,33 @@ form span {
   text-transform: uppercase;
 }
 
+.products .collapse table {
+  line-height: 3em;
+}
+
+.products .collapse table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid var(--dark-color);
+}
+
+.products .collapse table :where(th, td) {
+  border-bottom: 1px solid var(--border-color);
+  padding-left: 2em;
+  text-align: center;
+}
+
+.products .collapse .content {
+  display: none;
+}
+
+.products .collapse .expand .content {
+  display: flex;
+}
+
+.products .collapse .expand > a::before {
+  content: "-";
+}
+
 @media (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
