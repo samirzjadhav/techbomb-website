@@ -1540,6 +1540,41 @@ form span {
   content: "-";
 }
 
+.products .review-block-head .rate-sum {
+  position: relative;
+  font-size: 4em;
+  font-weight: var(--fw7);
+  padding-right: 0.5em;
+}
+
+.products .review-block-head .rate-sum::before {
+  content: "";
+  width: 2px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  transform: rotate(22deg);
+  background-color: var(--light-bg-color);
+}
+
+.products .review-block-body .item {
+  gap: 1em;
+  padding-bottom: 2.5em;
+  margin-top: 3.5em;
+}
+
+.products .review-block-body :where(.person, .review-title) {
+  font-weight: var(--fw7);
+  text-transform: uppercase;
+}
+
+.products .review-block-body .review-title {
+  font-size: 1.25em;
+  justify-content: end;
+}
+
 @media (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
