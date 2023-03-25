@@ -1445,6 +1445,47 @@ form span {
   border: 1px solid var(--border-color);
   margin: 0 2em 2em 0;
 }
+
+.products .actions :where(input, button) {
+  font-size: 1.25em;
+  outline: 0;
+  border: 0;
+}
+
+.products .actions input {
+  width: 50px;
+  text-align: center;
+}
+
+.products .qty-control button::before {
+  background-color: transparent;
+}
+
+.products .actions .button-cart {
+  flex: 1;
+  min-width: 200px;
+}
+
+.products .actions .button-cart button {
+  width: var(--percent100);
+  cursor: pointer;
+}
+
+.wish-share a {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: var(--fw7);
+  margin: 1em 2em 1em 0;
+  transition: var(--trans-color);
+}
+
+.products .qty-control :where(.minus, .plus) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
