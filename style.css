@@ -1581,6 +1581,62 @@ form span {
   border-bottom: 1px solid var(--border-color);
 }
 
+/* Products Review Form */
+.review-form .rating {
+  flex-wrap: wrap;
+}
+
+.review-form p {
+  font-size: 1.25em;
+  margin-right: 1em;
+}
+
+.review-form .rate-this input {
+  display: none;
+}
+
+.review-form .rate-this label {
+  float: right;
+  font-size: 2em;
+  color: var(--secondary-dark-color);
+}
+
+.rate-this > input:checked ~ label,
+.rate-this:not(:checked) > label:hover,
+.rate-this:not(:checked) > label:hover ~ label {
+  color: #f1c40e;
+}
+
+.rate-this > input:checked + label:hover,
+.rate-this > input:checked ~ label:hover,
+.rate-this > label:hover ~ input:checked ~ label,
+.rate-this > label:checked ~ input:hover ~ label {
+  color: #ffed85;
+}
+
+.review-form form {
+  margin-top: 2.5em;
+}
+
+form p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+form :where(input, textarea) {
+  line-height: 1;
+  padding: 1em;
+  border: 1px solid var(--border-color);
+  outline: 0;
+}
+
+form label {
+  font-weight: var(--fw5);
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
 @media (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
