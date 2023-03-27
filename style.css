@@ -1892,4 +1892,8 @@ form label {
   #page.showdpt .dpt-menu {
     display: block;
   }
+
+  .products.one .flexwrap > .row:last-child > .item {
+    padding-left: 2em;
+  }
 }
