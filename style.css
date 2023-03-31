@@ -1384,7 +1384,7 @@ form span {
   cursor: pointer;
 }
 
-.products .variant input {
+:where(.products .variant, .filter-block:not(.pricing)) input {
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
   position: absolute;
@@ -1675,6 +1675,130 @@ form label {
   height: 28px;
   font-size: var(--font-small);
   padding: 0.5em 0.25em;
+}
+
+/* Page single: special category */
+/* sidebar products filter */
+.filter-block {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
+.filter-block:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.filter-block h4 {
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+.filter-block li {
+  display: flex;
+  font-size: 0.9em;
+  position: relative;
+  line-height: 2;
+}
+
+.filter-block label .checked {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  line-height: 0;
+  display: inline-block;
+  border: 2px solid var(--secondary-dark-color);
+  vertical-align: text-top;
+  margin: 0 7px 0 0;
+  cursor: pointer;
+}
+
+.filter-block label .checked::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--secondary-dark-color);
+  top: 2px;
+  left: 2px;
+  opacity: 0;
+}
+
+.filter-block input:checked + label .checked::before {
+  opacity: 1;
+}
+
+.filter-block li .count {
+  margin-left: auto;
+  color: var(--light-text-color);
+}
+
+.bycolor label[for="cored"]::before {
+  background-color: var(--primary-color);
+}
+
+.bycolor label[for="colight"]::before {
+  background-color: var(--border-color);
+}
+
+.bycolor input:checked + label {
+  background-color: transparent;
+  border: 2px solid var(--dark-color);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: var(--percent100);
+}
+
+input[type="range"]:focus {
+  outline: 0;
+}
+
+/* input[type="range"]::-webkit-slider-runnable-track {
+  width: var(--percent100);
+  height: 5px;
+  cursor: pointer;
+  background-color: var(--border-color);
+  box-shadow: none;
+  border: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  z-index: 2;
+  position: relative;
+  height: 18px;
+  width: 14px;
+  background-color: var(--primary-color);
+  -webkit-appearance: none;
+  margin-top: -7px;
+} */
+
+input[type="range"]::-moz-range-progress {
+  background-color: #293043;
+  border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: #d7d7d7;
+  border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background: #293043;
+  border: solid white 1px;
+  border-radius: 50%;
+  margin-top: -6px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.byprice .price-range {
+  display: flex;
+  justify-content: space-between;
+  color: var(--light-text-color);
+  margin-top: 0.5em;
 }
 
 @media (min-width: 768px) {
