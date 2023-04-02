@@ -1678,6 +1678,17 @@ form label {
 }
 
 /* Page single: special category */
+/* page category */
+.single-category .holder {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-category .sidebar,
+.single-category .section {
+  flex: 1 0 100%;
+}
+
 /* sidebar products filter */
 .filter-block {
   margin-bottom: 1em;
@@ -1799,6 +1810,73 @@ input[type="range"]::-moz-range-thumb {
   justify-content: space-between;
   color: var(--light-text-color);
   margin-top: 0.5em;
+}
+
+/* head & products block */
+
+.page-title {
+  margin-bottom: 3em;
+}
+
+.cat-description p {
+  font-weight: var(--fw3);
+  font-size: 0.9em;
+}
+
+.cat-navigation {
+  font-size: 0.85em;
+  margin: 2em 0;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+.cat-navigation .item-filter {
+  margin-right: auto;
+}
+
+.cat-navigation > div {
+  position: relative;
+}
+
+.cat-navigation .item-filter a {
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.cat-navigation ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  min-width: var(--percent100);
+  width: max-content;
+  z-index: 10;
+}
+
+.cat-navigation .label,
+.cat-navigation ul li {
+  display: flex;
+  gap: 0.5em;
+  padding: 0.5em 1em;
+  transition: var(--trans-color);
+}
+
+:where(.item-sortir, .item-options) .label,
+.cat-navigation ul {
+  color: var(--light-text-color);
+  background-color: var(--light-bg-color);
+  cursor: pointer;
+}
+
+.cat-navigation :where(label, ul li):hover {
+  color: var(--dark-color);
+}
+
+:where(.item-sortir, .item-options):hover ul {
+  display: block;
+}
+
+.load-more {
+  margin: 2em 0 4em;
 }
 
 @media (min-width: 768px) {
@@ -2059,5 +2137,22 @@ input[type="range"]::-moz-range-thumb {
 
   .products.one .flexwrap > .row:last-child > .item {
     padding-left: 2em;
+  }
+
+  /* page category  */
+  .single-category .holder {
+    flex-direction: row;
+  }
+
+  .single-category .sidebar {
+    flex: 1 0 25%;
+  }
+
+  .single-category .sidebar .filter {
+    padding-right: 1.5em;
+  }
+
+  .single-category .section {
+    flex: 1 0 75%;
   }
 }
