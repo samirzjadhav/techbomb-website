@@ -1892,6 +1892,7 @@ input[type="range"]::-moz-range-thumb {
   z-index: 1000;
   box-shadow: rgb(0 0 0 / 30%) 0 10px 50px;
   visibility: hidden;
+  opacity: 0;
 }
 
 .filter.show {
@@ -2176,7 +2177,7 @@ input[type="range"]::-moz-range-thumb {
     flex: 1 0 75%;
   }
 
-  .single-category .section .filter {
+  .single-category .sidebar .filter {
     padding-right: 1.5em;
     position: relative;
     box-shadow: none;
@@ -2184,5 +2185,9 @@ input[type="range"]::-moz-range-thumb {
     z-index: initial;
     visibility: visible;
     opacity: 1;
+  }
+
+  .single-category .products.main .item {
+    flex: 0 0 33.3333%;
   }
 }
