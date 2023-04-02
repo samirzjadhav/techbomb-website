@@ -1894,6 +1894,11 @@ input[type="range"]::-moz-range-thumb {
   visibility: hidden;
 }
 
+.filter.show {
+  visibility: visible;
+  opacity: 1;
+}
+
 @media (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;

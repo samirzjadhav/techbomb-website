@@ -1040,5 +1040,27 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.js"></script>
     <script src="./script.js"></script>
+    <script>
+      // script for filter section
+      const fToShow = ".filter";
+      const fPopUp = document.querySelector(fToShow);
+      const fTrigger = document.querySelector(".filter-trigger");
+
+      fTrigger.addEventListener("click", () => {
+        setTimeout(() => {
+          if (!fPopUp.classList.contains("show")) {
+            fPopUp.classList.add("show");
+          }
+        }, 250);
+      });
+
+      // auto close by click outside .filter
+      document.addEventListener("click", (e) => {
+        const isClosest = e.target.closest(fToShow);
+        if (!isClosest && fPopUp.classList.contains("show")) {
+          fPopUp.classList.remove("show");
+        }
+      });
+    </script>
   </body>
 </html>
