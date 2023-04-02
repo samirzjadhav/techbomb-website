@@ -1879,6 +1879,21 @@ input[type="range"]::-moz-range-thumb {
   margin: 2em 0 4em;
 }
 
+.filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 2em;
+  max-width: 400px;
+  width: 90%;
+  background-color: var(--white-color);
+  overflow: auto;
+  z-index: 1000;
+  box-shadow: rgb(0 0 0 / 30%) 0 10px 50px;
+  visibility: hidden;
+}
+
 @media (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
