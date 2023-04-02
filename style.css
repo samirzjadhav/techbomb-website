@@ -2175,4 +2175,14 @@ input[type="range"]::-moz-range-thumb {
   .single-category .section {
     flex: 1 0 75%;
   }
+
+  .single-category .section .filter {
+    padding-right: 1.5em;
+    position: relative;
+    box-shadow: none;
+    width: var(--percent100);
+    z-index: initial;
+    visibility: visible;
+    opacity: 1;
+  }
 }
