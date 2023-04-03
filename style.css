@@ -1906,9 +1906,17 @@ input[type="range"]::-moz-range-thumb {
   position: absolute;
   width: 400px;
   top: 100%;
+  right: 0;
   background-color: var(--white-color);
   z-index: 1000;
   box-shadow: rgb(0 0 0 /30%) 0 10px 50px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.iscart:hover .mini-cart {
+  visibility: visible;
+  opacity: 1;
 }
 
 .mini-cart .products img {
@@ -1961,6 +1969,25 @@ input[type="range"]::-moz-range-thumb {
   margin-left: 1em;
   flex: 1;
   justify-content: flex-end;
+}
+
+.mini-cart .subtotal {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  margin-bottom: 2em;
+  border-top: 1px solid var(--border-color);
+}
+
+.mini-cart .subtotal p:last-child {
+  font-size: 2em;
+}
+
+.mini-cart .actions a {
+  display: block;
+  width: var(--percent100);
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 @media (min-width: 768px) {
