@@ -110,3 +110,24 @@ for (let x = 0; x < stocks.length; x++) {
 
   stocks[x].querySelector(".available").style.width = percent + "%";
 }
+
+// show cart on click
+const divToShow = ".mini-cart";
+const divPopup = document.querySelector(divToShow);
+const divTrigger = document.querySelector(".cart-trigger");
+
+divTrigger.addEventListener("click", () => {
+  setTimeout(() => {
+    if (!divPopup.classList.contains("show")) {
+      divPopup.classList.add("show");
+    }
+  }, 250);
+});
+
+// close by click outside
+document.addEventListener("click", (e) => {
+  const isClosest = e.target.closest(divToShow);
+  if (!isClosest && divPopup.classList.contains("show")) {
+    divPopup.classList.remove("show");
+  }
+});
