@@ -687,6 +687,7 @@
                     <div class="item">
                       <div class="coupon">
                         <input type="text" placeholder="Enter coupon  " />
+                        <button>Apply</button>
                       </div>
                       <div class="shipping-rate collapse">
                         <div class="has-child expand">
@@ -741,7 +742,7 @@
                                     <span>Flat: $10.00</span>
                                     <input
                                       type="radio"
-                                      name="flat"
+                                      name="rate-options"
                                       id="flat"
                                       checked
                                     />
@@ -749,7 +750,11 @@
                                   </p>
                                   <p>
                                     <span>Best: $0.00</span>
-                                    <input type="radio" name="best" id="best" />
+                                    <input
+                                      type="radio"
+                                      name="rate-options"
+                                      id="best"
+                                    />
                                     <label for="best" class="circle"></label>
                                   </p>
                                 </form>

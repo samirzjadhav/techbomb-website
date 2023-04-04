@@ -1393,7 +1393,7 @@ form span {
   width: 0;
 }
 
-.products .variant label::before {
+.products .color .variant label::before {
   opacity: 1;
 }
 
@@ -2045,6 +2045,113 @@ input[type="range"]::-moz-range-thumb {
 
 .products.cart table tbody tr {
   border-bottom: 1px solid var(--border-color);
+}
+
+/* Cart summary */
+.cart-summary {
+  width: var(--percent100);
+  margin: 2.5em 0 4em;
+}
+
+.cart-summary .item {
+  background-color: var(--light-bg-color);
+}
+
+.cart-summary .coupon {
+  position: relative;
+}
+
+.cart-summary .coupon input {
+  font-size: 1.1em;
+  outline: 0;
+  width: var(--percent100);
+  padding: 0 1.5em;
+  line-height: 50px;
+  background-color: var(--white-color);
+  border: 3px solid var(--dark-color);
+}
+
+.cart-summary .coupon button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  outline: 0;
+  font-size: 1em;
+  padding: 0 2.5em;
+  line-height: 56px;
+  background-color: var(--dark-color);
+  color: var(--border-color);
+  cursor: pointer;
+}
+
+.cart-summary .shipping-rate {
+  padding: 0 2em 0 1em;
+}
+
+.cart-summary .shipping-rate .has-child > a {
+  font-size: 1em;
+  margin: 2em 0;
+  border: 0;
+}
+
+.cart-summary .content form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.styled :where(input, select, textarea) {
+  padding: 0.75em;
+  outline: 0;
+  background-color: var(--white-color);
+  border-width: 0 0 3px 0;
+  border-style: solid;
+  border-color: var(--border-color);
+}
+
+.products .cart-summary .variant form label {
+  position: relative;
+  border: 0;
+  background-color: var(--white-color);
+  transform: scale(0.5) translateX(-25px);
+}
+
+.cart-summary .variant p span {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  line-height: 3;
+}
+
+.cart-summary .variant input:checked + label::before {
+  opacity: 1;
+}
+
+.products.cart .cart-total table tr > * {
+  padding: 0;
+}
+
+.products.cart .cart-total table td {
+  text-align: right;
+}
+
+.products.cart .cart-total table {
+  width: var(--percent100);
+}
+
+.cart-summary .cart-total {
+  padding: 2em;
+  background-color: var(--border-color);
+  line-height: 2;
+}
+
+.cart-summary .cart-total > a {
+  width: var(--percent100);
+  display: block;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 1em;
 }
 
 @media (min-width: 768px) {
