@@ -1919,7 +1919,7 @@ input[type="range"]::-moz-range-thumb {
   opacity: 1;
 }
 
-.mini-cart .products img {
+:is(.mini-cart .products, .products.cart) .thumbnail img {
   transform: none;
 }
 
@@ -1950,7 +1950,7 @@ input[type="range"]::-moz-range-thumb {
   overflow: auto;
 }
 
-.mini-cart .thumbnail {
+:where(.mini-cart, .products.cart) .thumbnail {
   position: relative;
   width: 80px;
   height: 80px;
@@ -1998,6 +1998,53 @@ input[type="range"]::-moz-range-thumb {
   bottom: 0;
   max-width: 400px;
   width: 90%;
+}
+
+/* page cart  */
+.products.cart form {
+  width: var(--percent100);
+}
+
+.products.cart table thead th {
+  vertical-align: middle;
+  background-color: var(--light-text-color);
+}
+
+.products.cart table :where(th, td) {
+  padding: 2em 1em;
+  text-align: center;
+}
+
+.products.cart table :where(th, td):first-child {
+  text-align: left;
+  padding-left: 2em;
+}
+
+.products.cart table tbody td:first-child {
+  padding-left: 0;
+}
+
+.products.cart table td :where(.content, .qty-control, p) {
+  margin: 0;
+  padding: 0;
+}
+
+.products.cart .qty-control :where(button, input) {
+  width: 32px;
+  height: 32px;
+  padding: 0.25em;
+  text-align: center;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.products.cart .qty-control button {
+  cursor: pointer;
+}
+
+.products.cart table tbody tr {
+  border-bottom: 1px solid var(--border-color);
 }
 
 @media (min-width: 768px) {
@@ -2289,5 +2336,14 @@ input[type="range"]::-moz-range-thumb {
 
   .single-category .products.main .item {
     flex: 0 0 33.3333%;
+  }
+  /* page cart */
+  .products.cart .form-cart {
+    width: 66%;
+  }
+  .products.cart .cart-summary {
+    width: 34%;
+    padding-left: 2em;
+    margin-top: 0;
   }
 }
