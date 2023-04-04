@@ -2154,6 +2154,37 @@ input[type="range"]::-moz-range-thumb {
   font-size: 1em;
 }
 
+@media (max-width: 639px) {
+  #cart-table thead {
+    display: none;
+  }
+
+  #cart-table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+  }
+
+  #cart-table tbody tr td:first-child {
+    width: var(--percent100);
+    min-width: var(--percent100);
+    position: relative;
+  }
+
+  #cart-table tbody tr td:not(:first-child) {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: var(--percent100);
+  }
+
+  #cart-table tbody tr td:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
