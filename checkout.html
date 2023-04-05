@@ -537,8 +537,7 @@
           <div class="container">
             <div class="wrapper">
               <div class="checkout flexwrap">
-                <div class="item left styled"></div>
-                <div class="item right styled">
+                <div class="item left styled">
                   <h1>Shipping Address</h1>
                   <form action="">
                     <p>
@@ -579,7 +578,42 @@
                       <label for="psotal">Zip/Postal Code <span></span></label>
                       <input type="number" id="postal" required />
                     </p>
+                    <p>
+                      <label for="country">Country</label>
+                      <select name="country" id="country">
+                        <option value=""></option>
+                        <option value="1">India</option>
+                        <option value="2">Korea</option>
+                        <option value="3">Japan</option>
+                        <option value="4" selected="selected">
+                          United State
+                        </option>
+                        <option value="5">Others</option>
+                      </select>
+                    </p>
+                    <p>
+                      <label for="phone">Phone Number<span></span></label>
+                      <input type="number" id="phone" required />
+                    </p>
+                    <p>
+                      <label>Order Notes (Optional)</label>
+                      <textarea cols="30" rows="10"></textarea>
+                    </p>
+                    <p class="checkset">
+                      <input type="checkbox" id="anaccount" />
+                      <label for="anaccount"> Create an Account ?</label>
+                    </p>
                   </form>
+                  <div class="shipping-methods">
+                    <h2>Shipping Methods</h2>
+                    <p class="checkset">
+                      <input type="radio" checked />
+                      <label> $5.00 flate rate</label>
+                    </p>
+                  </div>
+                  <div class="primary-checkout">
+                    <button class="primary-button">Place Order</button>
+                  </div>
                 </div>
               </div>
             </div>
